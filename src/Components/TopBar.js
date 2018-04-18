@@ -6,12 +6,15 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
+
 import blue from 'material-ui/colors/blue';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
 const styles = {
   root: {
-    flexGrow: 1,
+    //flexGrow: 1,
   },
   flex: {
     flex: 1,
@@ -38,7 +41,18 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <MuiThemeProvider theme={theme}>
+        <AppBar position="fixed" color="default">
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit" className={classes.flex}>
+              Title
+            </Typography>
+            <Button color="inherit">Login</Button>
+          </Toolbar>
+        </AppBar>
+        {/* <MuiThemeProvider theme={theme}>
           <AppBar position="fixed">
             <Toolbar>
               <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -50,7 +64,7 @@ class TopBar extends React.Component {
               <Button color="inherit">Login</Button>
             </Toolbar>
           </AppBar>
-        </MuiThemeProvider>
+        </MuiThemeProvider> */}
       </div>
     )
   }

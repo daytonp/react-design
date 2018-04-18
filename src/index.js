@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GridBerry from './pages/PaperTest';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import blue from 'material-ui/colors/blue';
-import "./index.css";
+import "./CustomStyles/index.css";
+//pages
+import Login from './Pages/login';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -18,7 +20,7 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
-    <GridBerry />
+    <Login />
     {/* <AnotherPage /> */}
   </MuiThemeProvider>, 
   document.querySelector('#root'));
