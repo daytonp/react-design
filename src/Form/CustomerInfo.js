@@ -17,6 +17,7 @@ const styles = theme => ({
     paddingLeft: '24px',
     paddingRight: '24px',
   }
+
 });
 
 class Login extends React.Component {
@@ -24,7 +25,6 @@ class Login extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <TopBar/>
           <FormControl fullWidth className={classes.margin}>
           <Grid container spacing={24}>            
             <Grid item xs={12}>

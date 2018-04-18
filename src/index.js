@@ -1,26 +1,18 @@
 import React from 'react';
+import CssBaseline from 'material-ui/CssBaseline';
 import ReactDOM from 'react-dom';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import blue from 'material-ui/colors/blue';
 import "./CustomStyles/index.css";
-//pages
+
+//All the pages go here
 import Login from './Pages/login';
-
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: blue[100],
-      main: blue[300],
-      dark: blue[500],
-      contrastText: '#fff',
-    },
-  },
-});
+import Takeoffs from './Pages/takeoffs';
+import NewTakeoffCustomer from './Pages/newTakeoffCustomer';
 
 ReactDOM.render(
-  <MuiThemeProvider theme={theme}>
-    <Login />
-    {/* <AnotherPage /> */}
-  </MuiThemeProvider>, 
+  <React.Fragment>
+    <CssBaseline />
+    {/* <Login /> */}
+    {/* <Takeoffs /> */}
+    <NewTakeoffCustomer />
+  </React.Fragment>,
   document.querySelector('#root'));

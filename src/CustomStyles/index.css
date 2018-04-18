@@ -1,5 +1,23 @@
-.bouncy {
-  background-color: pink;
-  padding: 80px;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+#root {
+  padding-top: 56px;
+  //padding-right: 16px;
+  //padding-left: 16px;
+}
+
+.groupedList {
+  background-color: white;
+  position: relative;
+  overflow: auto;
+  max-height: calc(100vh - 56px - 56px);
+}
+
+@media (min-width: 600px){
+  #root {
+    padding-top: 64px;
+  }
+  .groupedList {
+    max-height: calc(100vh - 64px - 56px);
+  }
 }
