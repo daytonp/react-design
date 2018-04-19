@@ -26,7 +26,7 @@ class Takeoffs extends React.Component {
       <div className={classes.root}>
         <TopBar title="Takeoffs"/>
         <GroupedList/>
-        <FloatingActionButton/>
+        <FloatingActionButton pathLink="/new-takeoff"/>
         <BottomNav/>
       </div>
     )

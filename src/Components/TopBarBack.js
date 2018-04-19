@@ -7,6 +7,7 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import Icon from 'material-ui/Icon';
+import { Link } from 'react-router-dom'
 
 const styles = {
   root: {
@@ -29,7 +30,7 @@ class TopBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="fixed" color="primary">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Back">
+            <IconButton component={Link} to="/takeoffs" className={classes.menuButton} color="inherit" aria-label="Back">
               <Icon>arrow_back</Icon>
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>

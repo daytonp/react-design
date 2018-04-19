@@ -10,6 +10,7 @@ import {FormControlLabel } from 'material-ui/Form';
 import Checkbox from 'material-ui/Checkbox';
 //components
 import TopBar from '../Components/TopBar';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root:{
@@ -45,10 +46,12 @@ class Login extends React.Component {
             <Grid item xs={6}>
               <Button 
                 variant="raised" 
-                color="primary" 
+                color="primary"
+                component={Link}
+                to="/takeoffs"
                 className={classes.button}
                 fullWidth>
-                Primary
+                Login
               </Button>
             </Grid>
             <Grid item xs={6}>
