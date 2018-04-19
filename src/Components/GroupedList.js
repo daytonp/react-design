@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import ListSubheader from 'material-ui/List/ListSubheader';
-import List, { ListItem, ListItemText } from 'material-ui/List';
+import List from 'material-ui/List';
 //components
 import ListItemTakeoffs from '../Components/ListItemTakeoffs';
 import Divider from 'material-ui/Divider';

@@ -6,13 +6,13 @@ import "./CustomStyles/index.css";
 //All the pages go here
 import Login from './Pages/login';
 import Takeoffs from './Pages/takeoffs';
-import NewTakeoffCustomer from './Pages/newTakeoffCustomer';
+import NewTakeoff from './Pages/newTakeoff';
 
 ReactDOM.render(
   <React.Fragment>
     <CssBaseline />
     {/* <Login /> */}
     {/* <Takeoffs /> */}
-    <NewTakeoffCustomer />
+    <NewTakeoff />
   </React.Fragment>,
   document.querySelector('#root'));

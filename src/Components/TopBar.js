@@ -19,7 +19,7 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" color="default">
+        <AppBar position="fixed" color="primary">
           <Toolbar>
             <Typography variant="title" color="inherit" className={classes.flex}>
               {this.props.title}

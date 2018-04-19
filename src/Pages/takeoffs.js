@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 //material UI
-import ListSubheader from 'material-ui/List/ListSubheader';
-import List, { ListItem, ListItemText } from 'material-ui/List';
-import Button from 'material-ui/Button';
-import AddIcon from '@material-ui/icons/Add';
+
 //components
 import TopBar from '../Components/TopBar';
 import BottomNav from '../Components/BottomNav';
@@ -28,8 +25,6 @@ class Takeoffs extends React.Component {
     return (
       <div className={classes.root}>
         <TopBar title="Takeoffs"/>
-        
-        {/* <ToolBar/> */}
         <GroupedList/>
         <FloatingActionButton/>
         <BottomNav/>

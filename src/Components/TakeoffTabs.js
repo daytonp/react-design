@@ -5,11 +5,18 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 //components
-import CustomerInfo from '../Form/CustomerInfo';
+import CustomerInfo from '../Takeoff/CustomerInfo';
+import SpecsTabs from '../Takeoff/SpecsTabs';
 
 const styles = {
   root: {
     flexGrow: 1,
+    //marginTop:'56px',
+    
+  },
+  takeoffTabs:{
+    //marginTop:'56px',
+    position:'static',
   },
   flex: {
     flex: 1,
@@ -26,7 +33,7 @@ function TabContainer(props) {
 
 class TakeoffTabs extends React.Component {
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -37,11 +44,12 @@ class TakeoffTabs extends React.Component {
     const { value } = this.state;
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar className={classes.takeoffTabs} color="default">
           <Tabs
             value={value} 
             onChange={this.handleChange}
             centered
+            fullWidth
           >
             <Tab label="Customer" />
             <Tab label="Specs" />
@@ -51,7 +59,7 @@ class TakeoffTabs extends React.Component {
         </AppBar>
 
         {value === 0 && <CustomerInfo/>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
+        {value === 1 && <SpecsTabs/>}
         {value === 2 && <TabContainer>Item Three</TabContainer>}
         {value === 3 && <TabContainer>Item Four</TabContainer>}
       </div>

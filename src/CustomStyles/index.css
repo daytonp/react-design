@@ -21,3 +21,9 @@
     max-height: calc(100vh - 64px - 56px);
   }
 }
+
+@media (min-width: 0px) and (orientation: landscape){
+  #root{
+    /* margin-top: 48px; */
+  }
+}

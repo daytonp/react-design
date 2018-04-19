@@ -11,6 +11,7 @@ import Icon from 'material-ui/Icon';
 const styles = {
   root: {
     flexGrow: 1,
+
   },
   flex: {
     flex: 1,
@@ -26,7 +27,7 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" color="default">
+        <AppBar position="fixed" color="primary">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Back">
               <Icon>arrow_back</Icon>
@@ -34,7 +35,7 @@ class TopBar extends React.Component {
             <Typography variant="title" color="inherit" className={classes.flex}>
               {this.props.title}
             </Typography>
-            <Button color="primary">Save</Button>
+            <Button variant="raised" color="secondary">Update</Button>
           </Toolbar>
         </AppBar>
       </div>

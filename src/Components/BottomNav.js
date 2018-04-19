@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
 import Icon from 'material-ui/Icon';
-import Divider from 'material-ui/Divider';
 
 const styles = {
   root: {

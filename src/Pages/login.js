@@ -10,12 +10,11 @@ import {FormControlLabel } from 'material-ui/Form';
 import Checkbox from 'material-ui/Checkbox';
 //components
 import TopBar from '../Components/TopBar';
-import BottomNav from '../Components/BottomNav';
 
 const styles = theme => ({
   root:{
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingLeft: '16px',
+    paddingRight: '16px',
   }
 });
 
@@ -24,7 +23,7 @@ class Login extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <TopBar/>
+        <TopBar title="Login to Riverside"/>
           <FormControl fullWidth className={classes.margin}>
           <Grid container spacing={24}>            
             <Grid item xs={12}>
@@ -35,8 +34,6 @@ class Login extends React.Component {
                 margin="normal"
                 fullWidth
               />
-            </Grid>
-            <Grid item xs={12}>  
               <TextField
                 id="password"
                 label="Password"
