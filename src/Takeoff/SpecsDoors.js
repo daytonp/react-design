@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 //material UI
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import TextField from 'material-ui/TextField';
 import Input, { InputLabel } from 'material-ui/Input';
-import {FormControl, FormControlLabel, FormLabel, FormHelperText } from 'material-ui/Form';
+import {FormControl, FormControlLabel, FormLabel } from 'material-ui/Form';
 import Select from 'material-ui/Select';
-import Switch from 'material-ui/Switch';
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import Divider from 'material-ui/Divider';
 //components
@@ -42,23 +40,17 @@ class SpecsDoors extends React.Component {
                   input={<Input id="name-native-error" />}
                 >
                   <option value="" />
-                  <optgroup label="Moulded">
-                    <option value="panel">Panel</option>
-                  </optgroup>
-                  <optgroup label="Stile and Rail">
-                    <option value="shaker">Shaker</option>
-                    <option value="raised panel">Raised Panel</option>
-                  </optgroup>
+                  <option value="panel">Mouled Panel</option>
+                  <option value="shaker">Stile and Rail Shaker</option>
                   <option value="french">French</option>
                   <option value="utility">Utility</option>
-                  <optgroup label="Flush">
-                    <option value="veneer">Veneer</option>
-                    <option value="hardboard">Hardboard</option>
-                  </optgroup>
+                  <option value="veneer">Flush Veneer</option>
+                  <option value="hardboard">Flush Hardboard</option>
+                  
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
             <FormLabel component="legend" required>Style</FormLabel>
             <Grid container spacing={24}> 
               <Grid item xs={4}>
@@ -112,7 +104,7 @@ class SpecsDoors extends React.Component {
                   <FormControlLabel value="solid" control={<Radio />} label="Solid" disabled/> 
                 </RadioGroup>
               </FormControl>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12}>
               <Divider/>
             </Grid>
