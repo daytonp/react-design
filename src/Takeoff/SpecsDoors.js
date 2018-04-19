@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import TextField from 'material-ui/TextField';
 import Input, { InputLabel } from 'material-ui/Input';
-import {FormControl, FormControlLabel, FormLabel } from 'material-ui/Form';
+import {FormControl, FormControlLabel, FormLabel, FormHelperText } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 import Switch from 'material-ui/Switch';
 import Radio, { RadioGroup } from 'material-ui/Radio';
@@ -64,7 +64,7 @@ class SpecsDoors extends React.Component {
               <Grid item xs={4}>
                 <FormControl fullWidth>
                   <InputLabel htmlFor="name-native-error">Count</InputLabel>
-                  <Select native input={<Input id="name-native-error" />}>
+                  <Select native input={<Input id="name-native-error" disabled/>}>
                     <option value="" />
                     <option value="1" />
                     <option value="2" />
@@ -75,7 +75,7 @@ class SpecsDoors extends React.Component {
               <Grid item xs={4}>
                 <FormControl fullWidth>
                   <InputLabel htmlFor="name-native-error">Char</InputLabel>
-                  <Select native>
+                  <Select native disabled>
                     <option value="" />
                     <option value="1" />
                     <option value="2" />
@@ -86,7 +86,7 @@ class SpecsDoors extends React.Component {
               <Grid item xs={4}>
                 <FormControl fullWidth>
                 <InputLabel htmlFor="name-native-error">Surface</InputLabel>
-                <Select native>
+                <Select native disabled>
                   <option value="" />
                   <option value="1" />
                   <option value="2" />
@@ -96,9 +96,7 @@ class SpecsDoors extends React.Component {
               </Grid>
             </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Divider/>
-            </Grid>
+            
             <Grid item xs={12}>
               <FormControl component="fieldset" required className={classes.formControl}>
                 <FormLabel component="legend">Core</FormLabel>
@@ -106,13 +104,17 @@ class SpecsDoors extends React.Component {
                     aria-label="core"
                     name="core"
                     className={classes.group}
+                    
                     //value={this.state.value}
                     //onChange={this.handleChange}
                   >
-                  <FormControlLabel value="hollow" control={<Radio />} label="Hollow"/>
-                  <FormControlLabel value="solid" control={<Radio />} label="Solid"/> 
+                  <FormControlLabel value="hollow" control={<Radio />} label="Hollow" disabled/>
+                  <FormControlLabel value="solid" control={<Radio />} label="Solid" disabled/> 
                 </RadioGroup>
               </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+              <Divider/>
             </Grid>
             <Grid item xs={12}>
               <FormControl component="fieldset" required className={classes.formControl}>
