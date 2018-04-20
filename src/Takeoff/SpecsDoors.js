@@ -50,7 +50,7 @@ class SpecsDoors extends React.Component {
                 </Select>
               </FormControl>
             </Grid>
-            {/* <Grid item xs={12}>
+            <Grid item xs={12}>
             <FormLabel component="legend" required>Style</FormLabel>
             <Grid container spacing={24}> 
               <Grid item xs={4}>
@@ -104,7 +104,7 @@ class SpecsDoors extends React.Component {
                   <FormControlLabel value="solid" control={<Radio />} label="Solid" disabled/> 
                 </RadioGroup>
               </FormControl>
-            </Grid> */}
+            </Grid>
             <Grid item xs={12}>
               <Divider/>
             </Grid>

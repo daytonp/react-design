@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 #root {
-  padding-top: 56px;
-  //padding-right: 16px;
-  //padding-left: 16px;
+  margin-top: 56px;
 }
 
 .groupedList {
@@ -15,7 +13,7 @@
 
 @media (min-width: 600px){
   #root {
-    padding-top: 64px;
+    margin-top: 64px;
   }
   .groupedList {
     max-height: calc(100vh - 64px - 56px);
@@ -24,6 +22,6 @@
 
 @media (min-width: 0px) and (orientation: landscape){
   #root{
-    /* margin-top: 48px; */
+    margin-top: 48px; 
   }
 }

@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles';
 
 //components
 import TopBarBack from '../Components/TopBarBack';
-import TakeoffTabs from '../Components/TakeoffTabs';
+import TakeoffTabs from '../Takeoff/TakeoffTabs';
 
 const styles = theme => ({
   listSection: {

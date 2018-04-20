@@ -7,10 +7,12 @@ import TextField from 'material-ui/TextField';
 import {FormControl, FormControlLabel } from 'material-ui/Form';
 import Switch from 'material-ui/Switch';
 //components
+import Autocomplete from '../Components/Autocomplete'
 
 
 const styles = theme => ({
   customerInfo:{
+    paddingTop: '24px',
     paddingLeft: '16px',
     paddingRight: '16px',
     //marginTop:'56px',
@@ -27,12 +29,12 @@ class CustomerInfo extends React.Component {
           <Grid container spacing={24}>            
             <Grid item xs={12}>
               <FormControl fullWidth className={classes.margin}>
-                <TextField
-                  id="customerName"
-                  label="Customer Name"
-                  placeholder="Enter the Customer's Name"
-                  margin="normal"
-                />
+                <Autocomplete
+                  id=""
+                  label=""
+                  placeholder=""
+                  suggestions=""
+                />  
                 <TextField
                   id="lot"
                   label="Lot"
@@ -106,8 +108,8 @@ class CustomerInfo extends React.Component {
                     }
                     label="Installation Required"
                   />
-                </FormControl>
-            </Grid>
+                </FormControl> 
+              </Grid>
           </Grid>
         
       </div>
