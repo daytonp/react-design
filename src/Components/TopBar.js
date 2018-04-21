@@ -9,6 +9,9 @@ const styles = {
   root: {
     //flexGrow: 1,
   },
+  appBar:{
+    boxShadow: 'none',
+  },
   flex: {
     flex: 1,
   },
@@ -19,7 +22,7 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" color="primary">
+        <AppBar position="fixed" color="primary" elevation={0}>
           <Toolbar>
             <Typography variant="title" color="inherit" className={classes.flex}>
               {this.props.title}

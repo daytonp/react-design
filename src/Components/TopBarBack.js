@@ -28,7 +28,7 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" color="primary">
+        <AppBar position="fixed" color="primary" elevation={0}>
           <Toolbar>
             <IconButton component={Link} to="/takeoffs" className={classes.menuButton} color="inherit" aria-label="Back">
               <Icon>arrow_back</Icon>

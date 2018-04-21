@@ -105,6 +105,56 @@ class GroupedList extends React.Component {
                 takeoffStatus="Submitted"
               />
               <Divider />
+              <ListItemTakeoffs
+                address="111 McCrae Place"
+                customerName="Dayton Pereira"
+                neighbourhood="Beechwood"
+                city="Waterloo"
+                createdAt="Apr 17, 2018"
+                updatedAt="Apr 23, 2018"
+                takeoffStatus="Submitted"
+              />
+              <Divider />
+              <ListItemTakeoffs
+                address="111 McCrae Place"
+                customerName="Dayton Pereira"
+                neighbourhood="Beechwood"
+                city="Waterloo"
+                createdAt="Apr 17, 2018"
+                updatedAt="Apr 23, 2018"
+                takeoffStatus="Submitted"
+              />
+              <Divider />
+              <ListItemTakeoffs
+                address="111 McCrae Place"
+                customerName="Dayton Pereira"
+                neighbourhood="Beechwood"
+                city="Waterloo"
+                createdAt="Apr 17, 2018"
+                updatedAt="Apr 23, 2018"
+                takeoffStatus="Submitted"
+              />
+              <Divider />
+              <ListItemTakeoffs
+                address="111 McCrae Place"
+                customerName="Dayton Pereira"
+                neighbourhood="Beechwood"
+                city="Waterloo"
+                createdAt="Apr 17, 2018"
+                updatedAt="Apr 23, 2018"
+                takeoffStatus="Submitted"
+              />
+              <Divider />
+              <ListItemTakeoffs
+                address="111 McCrae Place"
+                customerName="Dayton Pereira"
+                neighbourhood="Beechwood"
+                city="Waterloo"
+                createdAt="Apr 17, 2018"
+                updatedAt="Apr 23, 2018"
+                takeoffStatus="Submitted"
+              />
+              <Divider />
           </ul>
         </li>
       </List>

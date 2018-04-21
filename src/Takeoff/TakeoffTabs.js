@@ -11,12 +11,12 @@ import SpecsTabs from '../Takeoff/SpecsTabs';
 const styles = {
   root: {
     flexGrow: 1,
-    //marginTop:'56px',
+    paddingTop:'48px',
     
   },
   takeoffTabs:{
-    //marginTop:'56px',
-    position:'static',
+    position:'fixed',
+    top:'56px',
   },
   flex: {
     flex: 1,
@@ -33,7 +33,7 @@ function TabContainer(props) {
 
 class TakeoffTabs extends React.Component {
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -44,7 +44,7 @@ class TakeoffTabs extends React.Component {
     const { value } = this.state;
     return (
       <div className={classes.root}>
-        <AppBar className={classes.takeoffTabs} color="default">
+        <AppBar className={classes.takeoffTabs} color='primary' elevation={0}>
           <Tabs
             value={value} 
             onChange={this.handleChange}

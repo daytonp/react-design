@@ -6,19 +6,17 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 //components
 import SpecsDoors from '../Takeoff/SpecsDoors';
+import SpecsHardware from '../Takeoff/SpecsHardware';
+import SpecsTrim from '../Takeoff/SpecsTrim';
+import SpecsShelving from '../Takeoff/SpecsShelving';
 
 const styles = theme => ({
-  customerInfo:{
-    paddingLeft: '16px',
-    paddingRight: '16px',
-    //marginTop:'56px',
-  }
 
 });
 
 class SpecsTabs extends React.Component {
   state = {
-    value: 0,
+    value: 2,
   };
 
   handleChange = (event, value) => {
@@ -29,7 +27,7 @@ class SpecsTabs extends React.Component {
     const { value } = this.state;
     return (
       <div className={classes.root}>
-        <AppBar className={classes.takeoffTabs} color="default" position="static">
+        <AppBar color="secondary" position="static" elevation={0}>
           <Tabs
             value={value} 
             onChange={this.handleChange}
@@ -37,16 +35,16 @@ class SpecsTabs extends React.Component {
             fullWidth
           >
             <Tab label="doors" />
-            <Tab label="hardware" disabled/>
-            <Tab label="trim" disabled/>
-            <Tab label="shelving" disabled/>
+            <Tab label="hardware"/>
+            <Tab label="trim"/>
+            <Tab label="shelving"/>
           </Tabs>
         </AppBar>
 
         {value === 0 && <SpecsDoors/>}
-        {/* {value === 1 && <SpecsHardware/>}
+        {value === 1 && <SpecsHardware/>}
         {value === 2 && <SpecsTrim/>}
-        {value === 3 && <SpecsShelving/>} */}
+        {value === 3 && <SpecsShelving/>}
       </div>
     )
   }

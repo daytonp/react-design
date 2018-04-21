@@ -11,6 +11,12 @@
   max-height: calc(100vh - 56px - 56px);
 }
 
+@media (min-width: 0px) and (orientation: landscape){
+  #root{
+    margin-top: 48px; 
+  }
+}
+
 @media (min-width: 600px){
   #root {
     margin-top: 64px;
@@ -20,8 +26,3 @@
   }
 }
 
-@media (min-width: 0px) and (orientation: landscape){
-  #root{
-    margin-top: 48px; 
-  }
-}

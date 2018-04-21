@@ -108,7 +108,7 @@ function getSuggestions(inputValue) {
   });
 }
 
-class Autocomplete extends React.Component {
+class AutocompleteMulti extends React.Component {
   state = {
     inputValue: '',
     selectedItem: [],
@@ -229,8 +229,8 @@ const styles = theme => ({
   },
 });
 
-Autocomplete.propTypes = {
+AutocompleteMulti.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Autocomplete);
+export default withStyles(styles)(AutocompleteMulti);
