@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import ListSubheader from 'material-ui/List/ListSubheader';
 import List from 'material-ui/List';
+import Typography from 'material-ui/Typography';
 //components
 import ListItemTakeoffs from '../Components/ListItemTakeoffs';
 import Divider from 'material-ui/Divider';
@@ -14,6 +15,8 @@ const styles = theme => ({
   listSubheader:{
     backgroundColor: 'pink',
     color: 'black',
+    paddingTop:'16px',
+    paddingBottom:'16px',
   },
   ul: {
     backgroundColor: 'inherit',
@@ -28,7 +31,9 @@ class GroupedList extends React.Component {
       <List className={"groupedList"} subheader={<li />}>
         <li key={`section-1`} className={classes.listSection}>
           <ul className={classes.ul}>
-            <ListSubheader className={classes.listSubheader}>{`Takeoffs Started`}</ListSubheader>
+            <ListSubheader className={classes.listSubheader}>
+              <Typography variant="title">Takeoffs Estimated</Typography>
+            </ListSubheader>
               <ListItemTakeoffs
                 address="111 McCrae Place"
                 customerName="Dayton Pereira"
@@ -74,7 +79,9 @@ class GroupedList extends React.Component {
         </li>
         <li key={`section-2`} className={classes.listSection}>
           <ul className={classes.ul}>
-            <ListSubheader className={classes.listSubheader}>{`Takeoffs Submitted for Review`}</ListSubheader>
+            <ListSubheader className={classes.listSubheader}>
+            <Typography variant="title">Takeoffs Submitted</Typography>
+            </ListSubheader>
             <ListItemTakeoffs
                 address="111 McCrae Place"
                 customerName="Dayton Pereira"

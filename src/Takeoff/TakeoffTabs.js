@@ -14,6 +14,11 @@ const styles = {
     paddingTop:'48px',
     
   },
+  "@media (min-width: 0px) and (orientation: landscape)":{
+    root:{
+      paddingTop: '40px', 
+    },
+  },
   takeoffTabs:{
     position:'fixed',
     top:'56px',
