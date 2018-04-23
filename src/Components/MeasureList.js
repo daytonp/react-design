@@ -24,7 +24,7 @@ const styles = theme => ({
   },
 });
 
-class GroupedList extends React.Component {
+class MeasureList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -32,7 +32,7 @@ class GroupedList extends React.Component {
         <li key={`section-1`} className={classes.listSection}>
           <ul className={classes.ul}>
             <ListSubheader className={classes.listSubheader}>
-              <Typography variant="title">Takeoffs Estimated</Typography>
+              <Typography variant="title">Doors</Typography>
             </ListSubheader>
               <ListItemTakeoffs
                 address="111 McCrae Place"
@@ -170,8 +170,8 @@ class GroupedList extends React.Component {
   }
 }
 
-GroupedList.propTypes = {
+MeasureList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GroupedList);
+export default withStyles(styles)(MeasureList);

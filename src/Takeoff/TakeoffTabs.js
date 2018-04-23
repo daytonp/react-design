@@ -7,6 +7,8 @@ import Typography from 'material-ui/Typography';
 //components
 import CustomerInfo from '../Takeoff/CustomerInfo';
 import SpecsTabs from '../Takeoff/SpecsTabs';
+import Measure from '../Takeoff/Measure';
+import Summary from '../Takeoff/Summary';
 
 const styles = {
   root: {
@@ -38,7 +40,7 @@ function TabContainer(props) {
 
 class TakeoffTabs extends React.Component {
   state = {
-    value: 1,
+    value: 0,
   };
 
   handleChange = (event, value) => {
@@ -65,8 +67,8 @@ class TakeoffTabs extends React.Component {
 
         {value === 0 && <CustomerInfo/>}
         {value === 1 && <SpecsTabs/>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
-        {value === 3 && <TabContainer>Item Four</TabContainer>}
+        {value === 2 && <Measure/>}
+        {value === 3 && <Summary/>}
       </div>
     )
   }

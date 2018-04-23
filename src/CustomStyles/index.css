@@ -4,12 +4,12 @@
   margin-top: 56px;
 }
 
-.groupedList {
+/* .groupedList {
   background-color: white;
   position: relative;
   overflow: auto;
-  max-height: calc(100vh - 56px - 56px);
-}
+  max-height: calc(100vh - 56px);
+} */
 
 @media (min-width: 0px) and (orientation: landscape){
   #root{
@@ -21,8 +21,8 @@
   #root {
     margin-top: 64px;
   }
-  .groupedList {
-    max-height: calc(100vh - 64px - 56px);
-  }
+  /* .groupedList {
+    max-height: calc(100vh - 64px);
+  } */
 }
 

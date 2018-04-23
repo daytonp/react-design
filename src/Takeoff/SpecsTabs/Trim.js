@@ -42,7 +42,7 @@ const styles = theme => ({
 
 });
 
-class SpecsDoors extends React.Component {
+class Trim extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -542,9 +542,9 @@ class SpecsDoors extends React.Component {
   }
 }
 
-SpecsDoors.propTypes = {
+Trim.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 
-export default withStyles(styles)(SpecsDoors);
+export default withStyles(styles)(Trim);

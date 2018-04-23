@@ -5,10 +5,10 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 //components
-import SpecsDoors from '../Takeoff/SpecsDoors';
-import SpecsHardware from '../Takeoff/SpecsHardware';
-import SpecsTrim from '../Takeoff/SpecsTrim';
-import SpecsShelving from '../Takeoff/SpecsShelving';
+import SpecsDoors from '../Takeoff/SpecsTabs/Doors';
+import SpecsHardware from '../Takeoff/SpecsTabs/Hardware';
+import SpecsTrim from '../Takeoff/SpecsTabs/Trim';
+import SpecsShelving from '../Takeoff/SpecsTabs/Shelving';
 
 const styles = theme => ({
 

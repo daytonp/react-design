@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
+import { Link } from 'react-router-dom'
 //material UI
 import Button from 'material-ui/Button';
 import AddIcon from '@material-ui/icons/Add';
+
 //components
 import TopBar from '../Components/TopBar';
-import TakeoffList from '../Components/TakeoffList';
-import { Link } from 'react-router-dom'
+import BottomNav from '../Components/BottomNav';
+import SummaryList from '../Components/SummaryList';
 
 const styles = theme => ({
   listSection: {
@@ -17,32 +19,22 @@ const styles = theme => ({
     backgroundColor: 'inherit',
     padding: 0,
   },
-  fab: {
-    position: 'fixed',
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2,
-    zIndex: 100,
-  },
 });
 
-class Takeoffs extends React.Component {
+class Measure extends React.Component {
   render() {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <TopBar title="Takeoffs"/>
-        <TakeoffList/>
-        <Button component={Link} to="/newTakeoff" variant="fab" color="primary" aria-label="add" className={classes.fab}>
-          <AddIcon />
-        </Button>>
+        <SummaryList/>
       </div>
     )
   }
 }
 
-Takeoffs.propTypes = {
+Measure.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 
-export default withStyles(styles)(Takeoffs);
+export default withStyles(styles)(Measure);

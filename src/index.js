@@ -18,7 +18,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={Login} />
         <Route path="/takeoffs" component={Takeoffs} />
-        <Route path="/new-takeoff" component={NewTakeoff} />
+        <Route path="/newTakeoff" component={NewTakeoff} />
       </Switch>
     </React.Fragment>
   </BrowserRouter>,
