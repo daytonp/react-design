@@ -13,7 +13,7 @@ import Summary from '../Takeoff/Summary';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    marginTop:'112px',
+    marginTop:'104px',
     width: '100%',
   },
   takeoffTabs:{
@@ -27,10 +27,10 @@ const styles = theme => ({
 
   "@media (min-width: 0px) and (orientation: landscape)":{
     root:{
-      marginTop: '112px', 
+      marginTop: '96px', 
     },
     takeoffTabs:{
-      top:'64px',
+      top:'48px',
     },
   },
   "@media (min-width: 600px)":{
