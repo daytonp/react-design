@@ -15,10 +15,13 @@ import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root:{ 
+    maxWidth : 1080,
     display: 'flex',
     alignItems:'center',
     justifyContent: 'center',
+    margin: 'auto',
   },
+
   paper:{
     marginTop:'24px',
     paddingLeft: '16px',
@@ -32,61 +35,62 @@ class Login extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Paper className={classes.paper} elevation={24}>
           <TopBar title="Login to Riverside"/>
-            <FormControl fullWidth className={classes.margin}>
-            <Grid container spacing={24}>            
-              <Grid item xs={12}>
-                <TextField
-                  id="name"
-                  label="Username"
-                  className={classes.textField}
-                  margin="normal"
-                  fullWidth
-                />
-                <TextField
-                  id="password"
-                  label="Password"
-                  className={classes.textField}
-                  margin="normal"
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={6}>
-                <Button 
-                  variant="raised" 
-                  color="primary"
-                  component={Link}
-                  to="/takeoffs"
-                  className={classes.button}
-                  fullWidth>
-                  Login
-                </Button>
-              </Grid>
-              <Grid item xs={6}>
-                <Button 
-                  color="primary" 
-                  className={classes.button}
-                  fullWidth>
-                  Forgot password
-                </Button>
-              </Grid>
-              <Grid item xs={12}>  
-                <FormControlLabel
-                control={
-                  <Checkbox
-                    //checked={this.state.checkedB}
-                    //onChange={this.handleChange('checkedB')}
-                    value="checkedB"
-                    color="primary"
+            <Paper className={classes.paper} elevation={24}>
+              <FormControl fullWidth className={classes.margin}>
+              <Grid container spacing={24}>            
+                <Grid item xs={12}>
+                  <TextField
+                    id="name"
+                    label="Username"
+                    className={classes.textField}
+                    margin="dense"
+                    fullWidth
                   />
-                }
-                label="Keep me signed in"
-              />
+                  <TextField
+                    id="password"
+                    label="Password"
+                    className={classes.textField}
+                    margin="dense"
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Button 
+                    variant="raised" 
+                    color="primary"
+                    component={Link}
+                    to="/takeoffs"
+                    className={classes.button}
+                    fullWidth>
+                    Login
+                  </Button>
+                </Grid>
+                <Grid item xs={6}>
+                  <Button 
+                    color="primary" 
+                    className={classes.button}
+                    fullWidth>
+                    Forgot password
+                  </Button>
+                </Grid>
+                <Grid item xs={12}>  
+                  <FormControlLabel
+                  control={
+                    <Checkbox
+                      //checked={this.state.checkedB}
+                      //onChange={this.handleChange('checkedB')}
+                      value="checkedB"
+                      color="primary"
+                    />
+                  }
+                  label="Keep me signed in"
+                />
+                </Grid>
               </Grid>
-            </Grid>
-          </FormControl>
-        </Paper>
+            </FormControl>
+          </Paper>
+        
       </div>
     )
   }

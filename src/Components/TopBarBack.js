@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-class TopBar extends React.Component {
+class TopBarBack extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -36,7 +36,7 @@ class TopBar extends React.Component {
             <Typography variant="title" color="inherit" className={classes.flex}>
               {this.props.title}
             </Typography>
-            <Button variant="raised" color="secondary">Update</Button>
+            <Button variant="raised" color="secondary">Save</Button>
           </Toolbar>
         </AppBar>
       </div>
@@ -44,8 +44,8 @@ class TopBar extends React.Component {
   }
 }
 
-TopBar.propTypes = {
+TopBarBack.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TopBar);
+export default withStyles(styles)(TopBarBack);

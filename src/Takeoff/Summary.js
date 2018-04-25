@@ -12,6 +12,13 @@ import BottomNav from '../Components/BottomNav';
 import SummaryList from '../Components/SummaryList';
 
 const styles = theme => ({
+  root: {
+    maxWidth : 1080,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent: 'center',
+    margin: 'auto',
+  },
   listSection: {
     backgroundColor: 'inherit',
   },

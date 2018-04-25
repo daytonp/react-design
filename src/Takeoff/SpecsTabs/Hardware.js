@@ -18,6 +18,11 @@ const styles = theme => ({
     paddingLeft: '16px',
     paddingRight: '16px',
     paddingTop:'16px',
+    maxWidth : 1080,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent: 'center',
+    margin: 'auto',
   },
   paper:{
     padding:'16px',

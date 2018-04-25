@@ -10,6 +10,13 @@ import TakeoffList from '../Components/TakeoffList';
 import { Link } from 'react-router-dom'
 
 const styles = theme => ({
+  root:{ 
+    maxWidth : 1080,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent: 'center',
+    margin: 'auto',
+  },
   listSection: {
     backgroundColor: 'inherit',
   },
@@ -32,9 +39,9 @@ class Takeoffs extends React.Component {
       <div className={classes.root}>
         <TopBar title="Takeoffs"/>
         <TakeoffList/>
-        <Button component={Link} to="/newTakeoff" variant="fab" color="primary" aria-label="add" className={classes.fab}>
+        <Button component={Link} to="/newTakeoff" variant="fab" color="secondary" aria-label="add" className={classes.fab}>
           <AddIcon />
-        </Button>>
+        </Button>
       </div>
     )
   }

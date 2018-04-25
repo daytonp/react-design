@@ -10,33 +10,39 @@ import SpecsTabs from '../Takeoff/SpecsTabs';
 import Measure from '../Takeoff/Measure';
 import Summary from '../Takeoff/Summary';
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
-    paddingTop:'48px',
-    
-  },
-  "@media (min-width: 0px) and (orientation: landscape)":{
-    root:{
-      paddingTop: '40px', 
-    },
+    marginTop:'112px',
+    width: '100%',
   },
   takeoffTabs:{
     position:'fixed',
     top:'56px',
+    backgroundColor: theme.palette.primary.dark,
   },
   flex: {
     flex: 1,
   },
-};
 
-function TabContainer(props) {
-  return (
-    <Typography component="div" style={{ padding: 8 * 3 }}>
-      {props.children}
-    </Typography>
-  );
-}
+  "@media (min-width: 0px) and (orientation: landscape)":{
+    root:{
+      marginTop: '112px', 
+    },
+    takeoffTabs:{
+      top:'64px',
+    },
+  },
+  "@media (min-width: 600px)":{
+    root:{
+      marginTop: '112px',
+    },
+    takeoffTabs:{
+      top:'64px',
+    },
+  },
+
+});
 
 class TakeoffTabs extends React.Component {
   state = {
@@ -64,7 +70,6 @@ class TakeoffTabs extends React.Component {
             <Tab label="Summary"/>
           </Tabs>
         </AppBar>
-
         {value === 0 && <CustomerInfo/>}
         {value === 1 && <SpecsTabs/>}
         {value === 2 && <Measure/>}

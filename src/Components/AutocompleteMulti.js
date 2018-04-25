@@ -53,7 +53,7 @@ function renderInput(inputProps) {
       id="customer"
       label="Customer Name"
       placeholder="Start typing the customer name"
-      margin="normal"
+      margin="dense"
       InputProps={{
         inputRef: ref,
         classes: {

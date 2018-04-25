@@ -9,6 +9,12 @@ import ListItemTakeoffs from '../Components/ListItemTakeoffs';
 import Divider from 'material-ui/Divider';
 
 const styles = theme => ({
+  list: {
+    position: "relative",
+    overflow: "auto",
+    width: '100%',
+    boxShadow: theme.shadows[5],
+  },
   listSection: {
     backgroundColor: 'inherit',
   },
@@ -28,7 +34,7 @@ class SummaryList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <List className={"groupedList"} subheader={<li />}>
+      <List className={classes.list+ " groupedList"} subheader={<li />}>
         <li key={`section-1`} className={classes.listSection}>
           <ul className={classes.ul}>
             <ListSubheader className={classes.listSubheader}>

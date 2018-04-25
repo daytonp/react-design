@@ -27,8 +27,12 @@ const styles = theme => ({
   root: {
     paddingTop: "16px",
     paddingLeft: "16px",
-    paddingRight: "16px"
-    //marginTop:'56px',
+    paddingRight: "16px",
+    maxWidth : 1080,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent: 'center',
+    margin: 'auto',
   },
   appBar: {
     position: "relative"
@@ -83,6 +87,7 @@ class CustomerInfo extends React.Component {
       <div className={classes.root}>
         <Dialog
           fullScreen
+          //maxWidth="md"
           open={this.state.open}
           onClose={this.handleClose}
           transition={Transition}
@@ -121,46 +126,47 @@ class CustomerInfo extends React.Component {
             <Paper className={classes.paper} elevation={4}>
               <Grid container spacing={16}>
                 <Grid item xs={12}>
-                  <Typography variant="title" gutterBottom={false}>
-                    New Customer Details
-                  </Typography>
-                  <FormControl fullWidth className={classes.margin}>
-                    <TextField
-                      id="customerName"
-                      label="Customer Name"
-                      placeholder="Enter the Customer's Full Name"
-                      margin="normal"
-                    />
-                    <TextField
-                      id="customerPhone"
-                      label="Customer Phone"
-                      placeholder="Enter the Customer's Phone"
-                      margin="normal"
-                    />
-                    <TextField
-                      id="customerEmail"
-                      label="Customer Email"
-                      placeholder="Enter the Customer's Email"
-                      margin="normal"
-                    />
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <Divider />
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="subheading" gutterBottom>
-                    Is this an existing customer?
+                  <Typography variant="title" gutterBottom>
+                    Select from Existing Customers
                   </Typography>
                   <Button
                     onClick={this.handleClickOpen}
-                    color="primary"
+                    color="secondary"
                     className={classes.button}
                     variant="raised"
                   >
                     Select Customer
                   </Button>
                 </Grid>
+                <Grid item xs={12}>
+                  <Divider />
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="title" gutterBottom={false}>
+                    Customer Details
+                  </Typography>
+                  <FormControl fullWidth className={classes.margin}>
+                    <TextField
+                      id="customerName"
+                      label="Customer Name"
+                      placeholder="Enter the Customer's Full Name"
+                      margin="dense"
+                    />
+                    <TextField
+                      id="customerPhone"
+                      label="Customer Phone"
+                      placeholder="Enter the Customer's Phone"
+                      margin="dense"
+                    />
+                    <TextField
+                      id="customerEmail"
+                      label="Customer Email"
+                      placeholder="Enter the Customer's Email"
+                      margin="dense"
+                    />
+                  </FormControl>
+                </Grid>
+                
               </Grid>
             </Paper>
           </Grid>
@@ -177,37 +183,37 @@ class CustomerInfo extends React.Component {
                       id="lot"
                       label="Lot"
                       placeholder="Enter the Lot Number"
-                      margin="normal"
+                      margin="dense"
                     />
                     <TextField
                       id="address"
                       label="Civic (Site Address)"
                       placeholder="Enter the Site Address"
-                      margin="normal"
+                      margin="dense"
                     />
                     <TextField
                       id="city"
                       label="City"
                       placeholder="Enter the City"
-                      margin="normal"
+                      margin="dense"
                     />
                     <TextField
                       id="modelName"
                       label="Model Name"
                       placeholder="Enter the Model Name"
-                      margin="normal"
+                      margin="dense"
                     />
                     <TextField
                       id="elevation"
                       label="Elevation"
                       placeholder="Enter the Elevation"
-                      margin="normal"
+                      margin="dense"
                     />
                     <TextField
                       id="option"
                       label="Option"
                       placeholder="Enter the Option"
-                      margin="normal"
+                      margin="dense"
                     />
                   </FormControl>
                 </Grid>

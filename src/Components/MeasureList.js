@@ -9,14 +9,21 @@ import ListItemTakeoffs from '../Components/ListItemTakeoffs';
 import Divider from 'material-ui/Divider';
 
 const styles = theme => ({
+  list: {
+    position: 'relative',
+    overflow: 'auto',
+    width: '100%',
+    boxShadow: theme.shadows[5],
+  },
   listSection: {
-    backgroundColor: 'inherit',
+    backgroundColor: theme.palette.background.paper,
   },
   listSubheader:{
-    backgroundColor: 'pink',
+    backgroundColor: theme.palette.grey[50],
     color: 'black',
-    paddingTop:'16px',
-    paddingBottom:'16px',
+    paddingTop:'8px',
+    paddingBottom:'8px',
+    borderBottom: '1px solid ' + theme.palette.grey[200],
   },
   ul: {
     backgroundColor: 'inherit',
@@ -28,7 +35,7 @@ class MeasureList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <List className={"groupedList"} subheader={<li />}>
+    <List className={classes.list} subheader={<li />}>
         <li key={`section-1`} className={classes.listSection}>
           <ul className={classes.ul}>
             <ListSubheader className={classes.listSubheader}>
